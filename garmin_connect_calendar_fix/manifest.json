@@ -1,5 +1,6 @@
 {
   "name": "Garmin Connect - Calendar Fix",
+  "description": "Fix for color higlight of different activities on Garmin Connect calendar view.",
   "manifest_version": 2,
   "version": "1.0",
   "content_scripts": [
@@ -7,5 +8,6 @@
       "matches": ["http://connect.garmin.com/calendar"],
       "js": ["jquery.js", "fix.js"]
     }
-  ]
+  ],
+  "icons": { "48": "icon_calendar_48.png", "128": "icon_calendar_128.png" }
 }
