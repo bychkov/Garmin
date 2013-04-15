@@ -1,0 +1,11 @@
+{
+  "name": "Garmin Connect - Calendar Fix",
+  "manifest_version": 2,
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://connect.garmin.com/calendar"],
+      "js": ["jquery.js", "fix.js"]
+    }
+  ]
+}
