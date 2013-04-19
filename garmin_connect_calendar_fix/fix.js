@@ -1,5 +1,7 @@
 CalendarFix = function() {
+    console.log("setting timeout...");
     setTimeout(function(){
+        console.log("fixing...");
         jQuery(".item-icon.icon-run").parent().css({"background-color": "lightblue", "color" : "black", "font-weight" : "bold" });
         jQuery(".item-icon.icon-swim").parent().css({"background-color": "gold", "color" : "black", "font-weight" : "bold" });
         jQuery(".item-icon.icon-cycle").parent().css({"background-color": "lightcoral", "color" : "black", "font-weight" : "bold" });
@@ -22,7 +24,15 @@ CalendarFix = function() {
 
 jQuery("table.calendar-table").ready(function() {
 	CalendarFix();
-	jQuery(".calendar-goto-previous").bind("click", function() { CalendarFix(); } );
-	jQuery(".calendar-goto-next").bind("click", function() { CalendarFix(); } );
+    });
+jQuery(".calendar-goto-previous").ready(function() {
+	jQuery(".calendar-goto-previous").click(function() { 
+	CalendarFix(); } );
+	console.log("binding click for .calendar-goto-previous");
+    });
+jQuery(".calendar-goto-next").ready(function() {
+	jQuery(".calendar-goto-next").click(function() { 
+	CalendarFix(); } );
+	console.log("binding click for .calendar-goto-next");
     });
 
